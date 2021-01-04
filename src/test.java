@@ -1,9 +1,17 @@
+/*
+ * Muutujate kasutamise näide
+ * autor - Chris Erman
+ * ülesanne 1.2
+ * */
+
 public class test {
     public static void main(String[] args) {
-        System.out.println("Täna õppisime");
-        System.out.println("1. JDK Installeerimine ja seadistamine");
-        System.out.println("2. IDE Installeerimine ja seadistamine");
-        System.out.println("2. IDE Kasutamine");
-        System.out.println("2. git VCS Kasutamine");
+        // defineerime muutujad
+        int aasta = 2020;
+        String liblikas = "teelehe-mosaiikliblikas";
+        String lauseKeskosa = ". aasta liblikas on ";
+        String lause = aasta + lauseKeskosa + liblikas;
+        // väljastamine
+        System.out.println(lause);
     }
 }
