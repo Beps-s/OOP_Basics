@@ -1,7 +1,7 @@
 /*
  * Tingimuslauste kasutamise näide
  * autor - Chris Erman
- * ülesanne 2.2
+ * ülesanne 2.3c
  * */
 
 import java.util.Scanner;
@@ -12,17 +12,17 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage kursuste arv: ");
+        System.out.println("Sisestage inimeste arv: ");
         // salvestame kasutaja sisestatud väärtuse
-        int ainepunktid = sisend.nextInt();
+        int inimesed = sisend.nextInt();
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage nädalate arv: ");
+        System.out.println("Sisestage kohtade arv: ");
         // salvestame kasutaja sisestatud väärtuse
-        int weeks = sisend.nextInt();
-        // arvutame
-        int arvud = Math.multiplyExact(ainepunktid, 26);
-        float summa = Math.floorDiv(arvud, weeks);
-        System.out.println(summa);
+        int kohad = sisend.nextInt();
+        // programm peaks välja arvutama mitut bussi on vaja. -viga-
+        int buss = Math.floorDiv(inimesed, kohad);
+        // programm peab veel arvutama välja mitu inimest viimases bussis on
+        System.out.println(buss);
 
     }
 }
