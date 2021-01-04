@@ -12,18 +12,17 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage punktide summa: ");
+        System.out.println("Sisestage kursuste arv: ");
         // salvestame kasutaja sisestatud väärtuse
-        double punktid = sisend.nextDouble();
-        // kontroll
-        if (punktid >= 0 && punktid < 66) {
-            System.out.println("Vähem kui kandideerimiseks vajalik");
-        } else if (punktid >= 66 && punktid < 85) {
-            System.out.println("Kandideerimiseks vastuvõtule");
-        } else if (punktid >= 85 && punktid <= 100) {
-            System.out.println("Vastuvõtt tagatud");
-        } else if (punktid < 0 || punktid > 100) {
-            System.out.println("Vigane punktisumma");
-        }
+        int ainepunktid = sisend.nextInt();
+        // selgitame kasutajale, mida tuleb sisestada
+        System.out.println("Sisestage nädalate arv: ");
+        // salvestame kasutaja sisestatud väärtuse
+        int weeks = sisend.nextInt();
+        // arvutame
+        int arvud = Math.multiplyExact(ainepunktid, 26);
+        float summa = Math.floorDiv(arvud, weeks);
+        System.out.println(summa);
+
     }
 }
