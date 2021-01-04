@@ -1,17 +1,27 @@
 /*
  * Muutujate kasutamise näide
  * autor - Chris Erman
- * ülesanne 1.2
+ * ülesanne 1.3
  * */
+
+import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
         // defineerime muutujad
-        int aasta = 2020;
-        String liblikas = "teelehe-mosaiikliblikas";
-        String lauseKeskosa = ". aasta liblikas on ";
-        String lause = aasta + lauseKeskosa + liblikas;
+        // lubame kasutajal sisestada midagi
+        Scanner sisend = new Scanner(System.in);
+        // selgitame kasutajale, mida tuleb sisestada
+        System.out.println("Sisestage astme alus: ");
+        // salvestame kasutaja sisestatud väärtuse
+        int astmeAlus = sisend.nextInt();
+        // selgitame kasutajale, mida tuleb sisestada
+        System.out.println("Sisestage astendaja: ");
+        // salvestame kasutaja sisestatud väärtuse
+        int astendaja = sisend.nextInt();
+        // arvutame
+        int tulemus = (int) Math.pow(astmeAlus, astendaja);
         // väljastamine
-        System.out.println(lause);
+        System.out.println(tulemus);
     }
 }
