@@ -1,6 +1,6 @@
 /*
  * autor - Chris Erman
- * ülesanne 1.4a
+ * ülesanne 2.3c
  * */
 
 import java.util.Scanner;
@@ -11,17 +11,25 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage kursuste arv: ");
+        System.out.println("Sisestage inimeste arv: ");
         // salvestame kasutaja sisestatud väärtuse
-        int ainepunktid = sisend.nextInt();
+        int inimesed = sisend.nextInt();
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage nädalate arv: ");
+        System.out.println("Sisestage kohtade arv: ");
         // salvestame kasutaja sisestatud väärtuse
-        int weeks = sisend.nextInt();
+        int kohad = sisend.nextInt();
         // arvutame
-        double arvud = (double) (26 * ainepunktid) / weeks;
-        System.out.println(arvud);
-
+        int bussid = inimesed / kohad;
+        // leiame jäägi
+        int jaak = inimesed % kohad;
+        if (jaak > 0) {
+            bussid = (int) bussid + 1;
+        }
+        if (jaak > 0) {
+        } else {
+            jaak = kohad;
+        }
+        System.out.println("Busse vaja: " + bussid);
+        System.out.println("Viimases bussis inimesi: " + jaak);
     }
 }
-
