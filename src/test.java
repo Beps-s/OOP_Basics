@@ -1,6 +1,6 @@
 /*
  * autor - Chris Erman
- * ülesanne 3.3
+ * ülesanne 3.4b
  * while tsükkel
  * */
 
@@ -12,18 +12,19 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage mitu ringi joosti: ");
+        System.out.println("Sisestage mitu ruutu kõnniti: ");
         // salvestame kasutaja sisestatud väärtuse
         int korrad = sisend.nextInt();
         // korduv tegevus
-        int ring = 1;
-        int porgandid = 0;
-        while (ring <= korrad) {
-            if (ring % 2 == 0) {
-                porgandid = porgandid + ring;
+        int nisu = 0;
+        int kord = 0;
+        while (kord < korrad) {
+            nisu = nisu * 2;
+            if (nisu == 0) {
+                nisu++;
             }
-            ring++;
+            kord++;
         }
-        System.out.println("porgandite koguarv on: " + porgandid);
+        System.out.println("nisuteri " + kord + ". ruudu eest: " + nisu);
     }
 }
