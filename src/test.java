@@ -1,6 +1,6 @@
 /*
  * autor - Chris Erman
- * ülesanne 2.3c
+ * ülesanne 3.3
  * while tsükkel
  * */
 
@@ -12,14 +12,16 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage mitu korda tuleb äratada: ");
+        System.out.println("Sisestage mitu täringut veeretatakse: ");
         // salvestame kasutaja sisestatud väärtuse
-        int aratamine = sisend.nextInt();
+        int korrad = sisend.nextInt();
         // korduv tegevus
-        int kord = 1;
-        while (kord <= aratamine) {
-            System.out.println("Tõuse ja sära!");
-            kord++;
+        while (true) {
+            int taring = (int) Math.round(Math.random() * 6);
+            System.out.println(taring);
+            if (taring == korrad) {
+                break;
+            }
         }
     }
 }
