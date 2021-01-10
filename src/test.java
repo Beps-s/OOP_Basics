@@ -1,15 +1,15 @@
 /*
  * autor - Chris Erman
- * ülesanne 6.2
+ * ülesanne 6.3
  * meetod + return
  * */
 
 import java.util.Scanner;
 
 public class test {
-    static int mahlapakideArv(double ounteKogus) {
-        int pakideArv = (int) Math.round(ounteKogus * 0.4 / 3);
-        return pakideArv;
+    static int eelarve(int inimesed) {
+        int eelarve = 10 * inimesed + 55;
+        return eelarve;
     }
 
     public static void main(String[] args) {
@@ -17,9 +17,12 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage õune kogus kilogrammides: ");
+        System.out.println("Sisestage kutsutud inimeste arv: ");
         // salvestame kasutaja sisestatud väärtuse
-        double ounteKogus = sisend.nextDouble();
-        System.out.println(mahlapakideArv(ounteKogus));
+        int kutsutud = sisend.nextInt();
+        System.out.println("Sisestage inimeste arv, kes on teatanud, et tulevad: ");
+        int teatanud = sisend.nextInt();
+        System.out.println("Maksimaalne eelarve: " + eelarve(kutsutud));
+        System.out.println("Minimaalne eelarve: " + eelarve(teatanud));
     }
 }
