@@ -1,30 +1,32 @@
 /*
  * autor - Chris Erman
- * ülesanne 3.4b
- * while tsükkel
+ * ülesanne 6.1
+ * meetod + return
  * */
 
 import java.util.Scanner;
 
 public class test {
+    static String banner(String reklaamlause) {
+        String reklaamlauseSuurteTahtedega = reklaamlause.toUpperCase();
+        return reklaamlauseSuurteTahtedega;
+    }
+
     public static void main(String[] args) {
         // defineerime muutujad
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage mitu ruutu kõnniti: ");
+        System.out.println("Mitu korda kuvada reklaamlauset: ");
         // salvestame kasutaja sisestatud väärtuse
         int korrad = sisend.nextInt();
-        // korduv tegevus
-        int nisu = 0;
-        int kord = 0;
-        while (kord < korrad) {
-            nisu = nisu * 2;
-            if (nisu == 0) {
-                nisu++;
-            }
+        sisend = new Scanner(System.in);
+        System.out.println("Sisesta reklaamlause: ");
+        String lause = sisend.nextLine();
+        int kord = 1;
+        while (kord <= korrad) {
+            System.out.println(banner(lause));
             kord++;
         }
-        System.out.println("nisuteri " + kord + ". ruudu eest: " + nisu);
     }
 }
