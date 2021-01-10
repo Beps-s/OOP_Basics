@@ -1,15 +1,21 @@
 /*
  * autor - Chris Erman
- * ülesanne 6.3
+ * ülesanne 6.4a
  * meetod + return
  * */
 
 import java.util.Scanner;
 
 public class test {
-    static int eelarve(int inimesed) {
-        int eelarve = 10 * inimesed + 55;
-        return eelarve;
+    static String tervitus(int kord) {
+        int kd = 1;
+        while (kord >= kd) {
+            System.out.println("Võõrustaja: Tere!");
+            System.out.println("Täna " + kd + ". kord tervitada, mõtiskleb võõrustaja.");
+            System.out.println("Külaline: Tere, suur tänu kutse eest!");
+            kd++;
+            return
+        }
     }
 
     public static void main(String[] args) {
@@ -17,12 +23,9 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage kutsutud inimeste arv: ");
+        System.out.println("Sisestage külaliste arv: ");
         // salvestame kasutaja sisestatud väärtuse
-        int kutsutud = sisend.nextInt();
-        System.out.println("Sisestage inimeste arv, kes on teatanud, et tulevad: ");
-        int teatanud = sisend.nextInt();
-        System.out.println("Maksimaalne eelarve: " + eelarve(kutsutud));
-        System.out.println("Minimaalne eelarve: " + eelarve(teatanud));
+        int kord = sisend.nextInt();
+        System.out.println(tervitus(kord));
     }
 }
