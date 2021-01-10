@@ -1,15 +1,15 @@
 /*
  * autor - Chris Erman
- * ülesanne 6.1
+ * ülesanne 6.2
  * meetod + return
  * */
 
 import java.util.Scanner;
 
 public class test {
-    static String banner(String reklaamlause) {
-        String reklaamlauseSuurteTahtedega = reklaamlause.toUpperCase();
-        return reklaamlauseSuurteTahtedega;
+    static int mahlapakideArv(double ounteKogus) {
+        int pakideArv = (int) Math.round(ounteKogus * 0.4 / 3);
+        return pakideArv;
     }
 
     public static void main(String[] args) {
@@ -17,16 +17,9 @@ public class test {
         // lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Mitu korda kuvada reklaamlauset: ");
+        System.out.println("Sisestage õune kogus kilogrammides: ");
         // salvestame kasutaja sisestatud väärtuse
-        int korrad = sisend.nextInt();
-        sisend = new Scanner(System.in);
-        System.out.println("Sisesta reklaamlause: ");
-        String lause = sisend.nextLine();
-        int kord = 1;
-        while (kord <= korrad) {
-            System.out.println(banner(lause));
-            kord++;
-        }
+        double ounteKogus = sisend.nextDouble();
+        System.out.println(mahlapakideArv(ounteKogus));
     }
 }
