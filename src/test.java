@@ -1,31 +1,18 @@
 /*
  * autor - Chris Erman
- * ülesanne 6.4a
- * meetod + return
+ * ülesanne 5.1
+ * Massiivid
  * */
 
 import java.util.Scanner;
 
 public class test {
-    static String tervitus(int kord) {
-        int kd = 1;
-        while (kord >= kd) {
-            System.out.println("Võõrustaja: Tere!");
-            System.out.println("Täna " + kd + ". kord tervitada, mõtiskleb võõrustaja.");
-            System.out.println("Külaline: Tere, suur tänu kutse eest!");
-            kd++;
-            return
-        }
-    }
-
     public static void main(String[] args) {
-        // defineerime muutujad
-        // lubame kasutajal sisestada midagi
+        int[] vastuvoetud = {2803, 2626, 2359, 1927, 2236, 2281, 2394, 2484, 2468};
         Scanner sisend = new Scanner(System.in);
-        // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage külaliste arv: ");
-        // salvestame kasutaja sisestatud väärtuse
-        int kord = sisend.nextInt();
-        System.out.println(tervitus(kord));
+        System.out.println("Sisestage aasta: ");
+        int aasta = sisend.nextInt();
+        int index = aasta - 2011;
+        System.out.println(aasta + ". aastal on vastuvõetud " + vastuvoetud[index]);
     }
 }
