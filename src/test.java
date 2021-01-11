@@ -1,6 +1,6 @@
 /*
  * autor - Chris Erman
- * ülesanne 5.1
+ * ülesanne 5.4a
  * Massiivid
  * */
 
@@ -10,31 +10,31 @@ import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
-        // massiiv faili sisu hoidmiseks
-        ArrayList<String> aastad = new ArrayList<>();
-        // määrame fail ja kontrollime, kas on võiamlik lugeda andmed
-        File fail = new File("C:\\Users\\chris\\IdeaProjects\\oop_alused\\src\\vastuvoetud.txt");
+        Scanner lugu = new Scanner(System.in);
+        System.out.println("Sisestage faili nimi: ");
+        String album = lugu.nextLine();
+        ArrayList<String> sisu = new ArrayList<>();
+        File fail = new File("C:\\Users\\chris\\IdeaProjects\\oop_alused\\src\\" + album);
         Scanner sisendFailist = null;
         try {
             sisendFailist = new Scanner(fail);
         } catch (Exception e) {
             System.out.println("Faili pole - " + e.getMessage());
         }
-        // loeme failist
         while (sisendFailist.hasNextLine()) {
             String rida = sisendFailist.nextLine();
-            aastad.add(rida); // lisame loetud väärtus nimekirja sisse
+            sisu.add(rida);
         }
         sisendFailist.close();
-        // vaatame nimekirja sisu
-        for (int i = 0; i < aastad.size(); i++) {
-            System.out.println(aastad.get(i));
+        int nr = 1;
+        System.out.println("Muusikaplaatide valik:");
+        for (int i = 0; i < sisu.size(); i++) {
+            System.out.println(nr + ". " + sisu.get(i));
+            nr++;
         }
-        // küsime andmed kasutaja käest
-        Scanner sisendKasutajalt = new Scanner(System.in);
-        System.out.println("Sisesta aasta: ");
-        int aasta = sisendKasutajalt.nextInt();
-        sisendKasutajalt.close();
-        System.out.println("2011 aastas vastu võetud " + aastad.get(aasta - 2011));
+        System.out.println("Millist lugu soovite mängida: ");
+        int valik = lugu.nextInt();
+        valik = valik - 1;
+        System.out.println("Mängitav muusikapala on " + sisu.get(valik));
     }
 }
