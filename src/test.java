@@ -1,6 +1,6 @@
 /*
  * autor - Chris Erman
- * ülesanne 5.4c
+ * ülesanne 5.3
  * Massiivid
  * */
 
