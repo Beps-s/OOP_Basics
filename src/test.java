@@ -10,11 +10,8 @@ import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
-        Scanner lugu = new Scanner(System.in);
-        System.out.println("Sisestage faili nimi: ");
-        String album = lugu.nextLine();
-        ArrayList<String> sisu = new ArrayList<>();
-        File fail = new File("C:\\Users\\chris\\IdeaProjects\\oop_alused\\src\\" + album);
+        ArrayList<String> opilased = new ArrayList<>();
+        File fail = new File("C:\\Users\\chris\\IdeaProjects\\oop_alused\\src\\nimekiri.txt");
         Scanner sisendFailist = null;
         try {
             sisendFailist = new Scanner(fail);
@@ -23,18 +20,12 @@ public class test {
         }
         while (sisendFailist.hasNextLine()) {
             String rida = sisendFailist.nextLine();
-            sisu.add(rida);
+            opilased.add(rida);
         }
         sisendFailist.close();
-        int nr = 1;
-        System.out.println("Muusikaplaatide valik:");
-        for (int i = 0; i < sisu.size(); i++) {
-            System.out.println(nr + ". " + sisu.get(i));
-            nr++;
+
+        for (int i = 0; i < opilased.size(); i++) {
+            System.out.println(i opilased.get(i));
         }
-        System.out.println("Millist lugu soovite mängida: ");
-        int valik = lugu.nextInt();
-        valik = valik - 1;
-        System.out.println("Mängitav muusikapala on " + sisu.get(valik));
     }
 }
