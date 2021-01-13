@@ -6,13 +6,15 @@
 
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
-        ArrayList<Double> tehingud = new ArrayList<>();
-        File fail = new File("C:\\Users\\chris\\IdeaProjects\\oop_alused\\src\\konto.txt");
+        ArrayList<String> opilased = new ArrayList<>();
+        File fail = new File("C:\\Users\\chris\\IdeaProjects\\oop_alused\\src\\nimekiri.txt");
         Scanner sisendFailist = null;
         try {
             sisendFailist = new Scanner(fail);
@@ -20,14 +22,17 @@ public class test {
             System.out.println("Faili pole - " + e.getMessage());
         }
         while (sisendFailist.hasNextLine()) {
-            Double rida = sisendFailist.nextDouble();
-            tehingud.add(rida);
+            String rida = sisendFailist.nextLine();
+            opilased.add(rida);
         }
         sisendFailist.close();
-        for (int i = 0; i < tehingud.size(); i++) {
-            if (tehingud.get(i) >= 0) {
-                System.out.println(tehingud.get(i));
-            }
-        }
+        LocalDateTime tananeKuupaev = LocalDateTime.now();
+        System.out.println("Tänane kuupäev ilma vorminduseta " + tananeKuupaev);
+        DateTimeFormatter kuupaevaVormindus = DateTimeFormatter.ofPattern("dd");
+        String tananeKuupaevVormindatud = tananeKuupaev.format(kuupaevaVormindus);
+        System.out.println("Tänane vormindatud kuupäev " + tananeKuupaevVormindatud);
+        // otsime vajalik inimene nimekirjast
+        int indeks = Integer.parseInt(tananeKuupaevVormindatud);
+        System.out.println(opilased.get(indeks - 1));
     }
 }
