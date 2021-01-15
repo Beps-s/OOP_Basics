@@ -1,31 +1,28 @@
 /*
  * autor - Chris Erman
- * ülesanne 6.4a
- * meetod + return + tsükkel
+ * ülesanne HashMap
+ * HashMap
  * */
 
+
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class test {
-    static String tervitus(int kord) {
-        System.out.println("Võõrustaja: \"Tere!\"");
-        System.out.println("Täna " + kord + ". kord tervitada, mõtiskleb võõrustaja.");
-        System.out.println("Külaline: \"Tere, suur tänu kutse eest!\"");
-        return null;
-    }
-
     public static void main(String[] args) {
-        // defineerime muutujad
-        // lubame kasutajal sisestada midagi
-        Scanner sisend = new Scanner(System.in);
-        // selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage külaliste arv: ");
-        // salvestame kasutaja sisestatud väärtuse
-        int kord = sisend.nextInt();
-        int kd = 1;
-        while (kord >= kd) {
-            tervitus(kd);
-            kd++;
+        HashMap<String, String> grupp = new HashMap<String, String>();
+        grupp.put("mati", "mage");
+        grupp.put("mikael", "miku");
+        grupp.put("kevin", "kev");
+        /*
+        for (String hyydnimed: grupp.keySet()) {
+            System.out.println(hyydnimed + " - " + grupp.get(hyydnimed));
         }
+        */
+        Scanner sisend = new Scanner(System.in);
+        System.out.println("Sisestage nimi: ");
+        String nimi = sisend.nextLine();
+        nimi = nimi.toLowerCase();
+        System.out.println(nimi + " - " + grupp.get(nimi));
     }
 }
