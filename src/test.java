@@ -1,7 +1,7 @@
 /*
  * autor - Chris Erman
  * ülesanne 6.4a
- * meetod + return
+ * meetod + return + tsükkel
  * */
 
 import java.util.Scanner;
