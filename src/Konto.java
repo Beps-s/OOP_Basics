@@ -2,6 +2,17 @@ public class Konto {
     public String omanik;
     public Double balance;
 
+    public Konto(String omanikuNimi) {
+        //this.looKonto(omanikuNimi, 0.0);
+        this.omanik = omanikuNimi;
+        this.balance = 0.0;
+    }
+
+
+    public Konto(String omanikuNimi, Double summa) {
+        this.looKonto(omanikuNimi, summa);
+    }
+
     public void looKonto(String omanikuNimi, Double summa) {
         this.omanik = omanikuNimi;
         this.balance = summa;
