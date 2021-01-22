@@ -5,9 +5,18 @@
 
 public class Test {
     public static void main(String[] args) {
-        Toode meieToode = new Toode("Banaan", 1.3, 4);
+        KahanevLoendur loendur = new KahanevLoendur(10);
+        loendur.valjastaVaartus();
 
-        /*Konto chrisKontoSEB = new Konto("Chris", 500.0);
+        loendur.kahane();
+        loendur.valjastaVaartus();
+
+        loendur.kahane();
+        loendur.valjastaVaartus();
+
+
+        /*Toode meieToode = new Toode("Banaan", 1.3, 4);
+        Konto chrisKontoSEB = new Konto("Chris", 500.0);
         Konto chrisKontoSWED = new Konto("Chris");
         chrisKontoSEB.looKonto("Chris", 0.0);
         //chrisKontoSWED.looKonto("Chris", 0.0);
