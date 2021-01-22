@@ -16,4 +16,8 @@ public class KahanevLoendur {
             this.vaartus = vaartus;
         }
     }
+
+    public void reset() {
+        this.vaartus = 0;
+    }
 }
