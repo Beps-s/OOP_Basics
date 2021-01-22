@@ -5,25 +5,30 @@
 
 public class Test {
     public static void main(String[] args) {
-        KahanevLoendur loendur = new KahanevLoendur(100);
+        Menyy meieSoogid = new Menyy();
 
+        meieSoogid.lisaSook("kana");
+        meieSoogid.lisaSook("kana");
+
+        meieSoogid.valjastaMenyy();
+
+        meieSoogid.puhastaMenyy();
+
+        meieSoogid.valjastaMenyy();
+
+        /*KahanevLoendur loendur = new KahanevLoendur(100);
         loendur.valjastaVaartus();
-
         loendur.kahane();
-        ;
         loendur.valjastaVaartus();
-
         loendur.kahane();
         loendur.valjastaVaartus();
-
         loendur.reset();
         loendur.valjastaVaartus();
-
         loendur.algvaartusta();
         loendur.valjastaVaartus();
 
+        Toode meieToode = new Toode("Banaan", 1.3, 4);
 
-        /*Toode meieToode = new Toode("Banaan", 1.3, 4);
         Konto chrisKontoSEB = new Konto("Chris", 500.0);
         Konto chrisKontoSWED = new Konto("Chris");
         chrisKontoSEB.looKonto("Chris", 0.0);
