@@ -9,11 +9,17 @@ public class Test {
 
         loendur.valjastaVaartus();
 
-        loendur.reset();
-        loendur.valjastaVaartus();
+        loendur.kahane();
         ;
+        loendur.valjastaVaartus();
 
         loendur.kahane();
+        loendur.valjastaVaartus();
+
+        loendur.reset();
+        loendur.valjastaVaartus();
+
+        loendur.algvaartusta();
         loendur.valjastaVaartus();
 
 
