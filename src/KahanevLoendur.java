@@ -10,6 +10,10 @@ public class KahanevLoendur {
     }
 
     public void kahane() {
-        this.vaartus = vaartus - 1;
+        if (vaartus > 0) {
+            this.vaartus = vaartus - 1;
+        } else {
+            this.vaartus = vaartus;
+        }
     }
 }
