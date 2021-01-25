@@ -1,4 +1,4 @@
-public class Ristkülik {
+public class Ristkylik {
     private Double laius;
     private Double korgus;
 

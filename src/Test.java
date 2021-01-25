@@ -7,7 +7,7 @@ public class Test {
     public static void main(String[] args) {
 
 
-        /*Ristkülik kujund = new Ristkülik();
+        /*Ristkylik kujund = new Ristkylik();
         kujund.setLaius(-10.0);
         kujund.setKorgus(20.0);
         System.out.println(kujund);
