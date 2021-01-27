@@ -5,7 +5,14 @@
 
 public class Test {
     public static void main(String[] args) {
-
+        Inimene matti = new Inimene("Matti");
+        Inimene john = new Inimene("John");
+        matti.setPikkus(180.0);
+        matti.setMass(86.0);
+        john.setPikkus(175.0);
+        john.setMass(64.0);
+        System.out.println(matti.getNimi() + ", kehamassiindeks: " + matti.kmi());
+        System.out.println(john.getNimi() + ", kehamassiindeks: " + john.kmi());
 
         /*Ristkylik kujund = new Ristkylik();
         kujund.setLaius(-10.0);
