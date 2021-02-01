@@ -5,14 +5,33 @@
 
 public class Test {
     public static void main(String[] args) {
-        Inimene matti = new Inimene("Matti");
-        Inimene john = new Inimene("John");
-        matti.setPikkus(180.0);
-        matti.setMass(86.0);
-        john.setPikkus(175.0);
-        john.setMass(64.0);
-        System.out.println(matti.getNimi() + ", kehamassiindeks: " + matti.kmi());
-        System.out.println(john.getNimi() + ", kehamassiindeks: " + john.kmi());
+        Loom minuloom = new Loom("Minu loom");
+        System.out.println(minuloom);
+        minuloom.soon();
+        minuloom.haal();
+        minuloom.jalutan();
+        Kass miisu = new Kass("Miisu", "must");
+        miisu.jalutan();
+        miisu.soon();
+        miisu.haal();
+
+        /*Inimene mati = new Inimene("Mati");
+        mati.setPikkus(1.80);
+        mati.setMass(149.0);
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
+        System.out.println("kmi = " + mati.kmi());
+        System.out.printf("kmi = %.2f\n", mati.kmi());
+
+        mati.suurendaKaal();
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
+
+        mati.suurendaKaal(5.0);
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
+        System.out.printf("kmi = %.2f\n", mati.kmi());
+
+        mati.normaalKaal();
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
+        System.out.printf("kmi = %.2f\n", mati.kmi());
 
         /*Ristkylik kujund = new Ristkylik();
         kujund.setLaius(-10.0);
