@@ -13,22 +13,50 @@ public class Inimene {
         this.mass = mass;
     }
 
-    public String getNimi() {
-        return nimi;
+    public Double getMass() {
+        return mass;
     }
 
-    public Double getPikkus() {
-        return pikkus;
+    public String getNimi() {
+        return nimi;
     }
 
     public void setPikkus(Double pikkus) {
         this.pikkus = pikkus;
     }
 
-    public Double kmi() {
-        pikkus = pikkus / 100;
-        pikkus = pikkus * pikkus;
-        double kmi = mass / pikkus;
-        return (kmi);
+    public Double getPikkus() {
+        return pikkus;
     }
+
+    public double kmi() {
+        double tulemus = this.mass / Math.pow(this.pikkus, 2);
+        return tulemus;
+    }
+
+    public void suurendaKaal() {
+        this.mass++;
+    }
+
+    public void suurendaKaal(double kg) {
+        this.mass += kg;
+    }
+
+    public void vahendaKaal() {
+        this.mass--;
+    }
+
+    public void normaalKaal() {
+        while (this.kmi() < 19.0) {
+            this.suurendaKaal();
+        }
+        while (this.kmi() >= 25.0) {
+            this.vahendaKaal();
+        }
+        if (this.kmi() >= 19.0 && this.kmi() < 25) {
+            System.out.println(this.nimi + ", sinu kaal on normis");
+        }
+    }
+
+
 }
