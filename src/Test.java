@@ -5,7 +5,20 @@
 
 public class Test {
     public static void main(String[] args) {
-        Loom minuloom = new Loom("Minu loom");
+        Restoraan McDonalds = new Restoraan("McDonalds", "Burger");
+        System.out.println(McDonalds);
+        McDonalds.avaRestoran();
+        McDonalds.setKylalised(20);
+        McDonalds.teenindatudKylalisedPaevas();
+        System.out.println("\n");
+        Restoraan Jäätisekiosk = new Jaatisekiosk("Jäätisised", "Jäätis");
+
+        System.out.println(Jäätisekiosk);
+        Jäätisekiosk.avaRestoran();
+        Jäätisekiosk.setKylalised(12);
+        Jäätisekiosk.teenindatudKylalisedPaevas();
+
+        /*Loom minuloom = new Loom("Minu loom");
         System.out.println(minuloom);
         minuloom.soon();
         minuloom.haal();
