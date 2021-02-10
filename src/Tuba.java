@@ -7,7 +7,7 @@ public class Tuba {
     private int seinaPindala;
     private AknadUksed usteAkendePindala;
 
-    public seinaPindala(int esimeneSein, int teineSein) {
+    public void seinaPindala(int esimeneSein, int teineSein) {
         int kaheSeinaPindala = esimeneSein * teineSein;
         int seinaPindala = kaheSeinaPindala * 2;
         this.seinaPindala = seinaPindala;
