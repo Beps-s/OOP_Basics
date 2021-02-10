@@ -4,7 +4,20 @@
 
 public class Test {
     public static void main(String[] args) {
-        Sein seinPohi = new Sein("põhi");
+        AknadUksed aken = new AknadUksed();
+        aken.setAknaKorgus(50);
+        aken.setAknaLaius(50);
+        AknadUksed uks = new AknadUksed();
+        uks.setUkseKorgus(200);
+        uks.setUkseLaius(100);
+        Tuba tuba = new Tuba();
+        tuba.setKorgus(250);
+        tuba.setLaius(400);
+        tuba.setPikkus(600);
+        tuba.getUsteAkendePindala();
+        tuba.getSeinaPindala();
+
+        /*Sein seinPohi = new Sein("põhi");
         Sein seinLouna = new Sein("lõuna");
         Sein seinLaane = new Sein("lääne");
         Sein seinIda = new Sein("ida");
