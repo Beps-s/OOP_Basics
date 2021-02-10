@@ -1,11 +1,23 @@
 /*
  * autor - Chris Erman
- * konto halduse programm
  * */
 
 public class Test {
     public static void main(String[] args) {
-        Restoraan McDonalds = new Restoraan("McDonalds", "Burger");
+        Sein seinPohi = new Sein("põhi");
+        Sein seinLouna = new Sein("lõuna");
+        Sein seinLaane = new Sein("lääne");
+        Sein seinIda = new Sein("ida");
+        Lagi lagi = new Lagi(2.5, "valge");
+        Voodi voodi = new Voodi("kahele", 2, 1, "valge", 70);
+        Lamp lamp = new Lamp("Klassikaline", false);
+
+        MagamisTuba magamisTuba = new MagamisTuba("Külaliste magamistuba", seinPohi, seinLouna, seinLaane, seinIda, lagi, voodi, lamp);
+        magamisTuba.valmistaVoodi();
+        magamisTuba.valmistaLamp();
+        System.out.println(magamisTuba.getLamp().isSisseLulitatud());
+
+        /*Restoraan McDonalds = new Restoraan("McDonalds", "Burger");
         System.out.println(McDonalds);
         McDonalds.avaRestoran();
         McDonalds.setKylalised(20);
