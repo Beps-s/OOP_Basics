@@ -5,7 +5,7 @@ public class Opetaja {
         this.nimi = nimi;
     }
 
-    //Õpetaja õpetab õpilastele teemad
+    //Õpetaja õpetab õpilastele teemad (Puudu)
     public void opetab(Opilane opilane, String teema) {
 
     }

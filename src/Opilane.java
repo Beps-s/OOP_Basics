@@ -5,6 +5,7 @@ public class Opilane {
     ArrayList<String> teadmised = new ArrayList<>();
     private String nimi;
 
+    //tekib õpilane
     public Opilane(String nimi) {
         this.nimi = nimi;
         teadmised.add("OOP");

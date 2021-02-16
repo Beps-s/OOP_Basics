@@ -1,5 +1,5 @@
 /*
- * autor - Chris Erman
+ * author - Chris Erman
  * */
 
 import java.util.ArrayList;
