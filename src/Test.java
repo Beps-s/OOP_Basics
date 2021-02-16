@@ -2,9 +2,63 @@
  * autor - Chris Erman
  * */
 
+import java.util.ArrayList;
+
 public class Test {
     public static void main(String[] args) {
-        AknadUksed aken = new AknadUksed();
+        // moodustame õpetatavate teemade nimekirja
+        ArrayList<String> teemad = new ArrayList<>();
+        teemad.add("OOP");
+        teemad.add("Pärilus");
+        teemad.add("Kapseldus");
+        teemad.add("Kompositsioon");
+        // loome õpetaja
+        Opetaja opetaja = new Opetaja("Anna");
+
+        // Loome klass
+        ArrayList<Opilane> ita21 = new ArrayList<>();
+        Opilane mati = new Opilane("Mati");
+        Opilane kati = new Opilane("Kati");
+        ita21.add(mati);
+        ita21.add(kati);
+
+        // Õpetaja õpetab oma õpilased
+        oppetoo(teemad, ita21, opetaja);
+
+        // teadmiste kontroll pärast aine lõpetamiset
+        teadmisteKontroll(ita21);
+        // ühe nädala pärast Mati unustab teemat Kapseldust
+        mati.unusta("Kapseldus");
+        System.out.println("Mati unustas eelneva teema");
+        // kontrollime uuesti teadmised
+        teadmisteKontroll(ita21);
+        // las Mati uuesti õpib kalselduse teemad
+        mati.opib("Kapseldus");
+        System.out.println("Mati õppis uue teema");
+        // kontrollime uuesti teadmised
+        teadmisteKontroll(ita21);
+
+
+    }
+
+    public static void teadmisteKontroll(ArrayList<Opilane> grupp) {
+        for (Opilane opilane : grupp) {
+            System.out.println("Opilane " + opilane.getNimi() + " teadmised:");
+            for (String teadmine : opilane.getTeadmised()) {
+                System.out.println(teadmine);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void oppetoo(ArrayList<String> teemad, ArrayList<Opilane> grupp, Opetaja opetaja) {
+        for (String teema : teemad) {
+            for (Opilane opilane : grupp) {
+                opetaja.opetab(opilane, teema);
+            }
+        }
+
+        /*AknadUksed aken = new AknadUksed();
         aken.setAknaKorgus(50);
         aken.setAknaLaius(50);
         AknadUksed uks = new AknadUksed();
@@ -14,8 +68,8 @@ public class Test {
         tuba.setKorgus(250);
         tuba.setLaius(400);
         tuba.setPikkus(600);
-        tuba.getUsteAkendePindala();
-        tuba.getSeinaPindala();
+        System.out.println(tuba.getSeinaPindala());
+        System.out.println(tuba);
 
         /*Sein seinPohi = new Sein("põhi");
         Sein seinLouna = new Sein("lõuna");
