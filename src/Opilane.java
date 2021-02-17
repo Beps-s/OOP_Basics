@@ -1,27 +1,24 @@
 import java.util.ArrayList;
 
 public class Opilane {
+    //Tekitasin teadmised listi, et sellega õpilasele anda või võtta teadmisi
+    ArrayList<String> teadmised = new ArrayList<>();
     private String nimi;
-    private ArrayList<String> teadmised;
 
     //tekib õpilane
     public Opilane(String nimi) {
         this.nimi = nimi;
-        teadmised = new ArrayList<>();
     }
 
     //Õpilane unustab teema
     public void unusta(String unustabTeema) {
-        for (int i = 0; i < teadmised.size(); i++) {
-            String jooksevTeema = teadmised.get(i);
-            if (jooksevTeema.equals(unustabTeema)) {
-                teadmised.remove(i);
-            }
-        }
+        if (teadmised.contains(unustabTeema)) ;
+        teadmised.remove(unustabTeema);
     }
 
     //Õpilane õpib iseseisvalt teema
     public void opib(String opibTeema) {
+        if (!teadmised.contains(opibTeema)) ;
         teadmised.add(opibTeema);
     }
 

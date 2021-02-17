@@ -7,6 +7,6 @@ public class Opetaja {
 
     //Õpetaja õpetab õpilastele teemad (Puudu)
     public void opetab(Opilane opilane, String teema) {
-
+        opilane.opib(teema);
     }
 }
