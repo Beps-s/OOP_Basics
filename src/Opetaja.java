@@ -10,3 +10,4 @@ public class Opetaja {
         opilane.opib(teema);
     }
 }
+//Vigade parandus sisse viidud

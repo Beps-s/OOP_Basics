@@ -1,11 +1,12 @@
 /*
- * autor - Chris Erman
+ * author - Chris Erman
  * */
 
 import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
+        //Vigade parandus sisse viidud
         // moodustame õpetatavate teemade nimekirja
         ArrayList<String> teemad = new ArrayList<>();
         teemad.add("OOP");

@@ -30,3 +30,4 @@ public class Opilane {
         return teadmised;
     }
 }
+//Vigade parandus sisse viidud
